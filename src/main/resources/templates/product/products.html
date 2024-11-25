@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}"
+>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="/css/product/products.css">
+  <script defer type="module" src="/js/product/products.js"></script>
+  <title>Product List Page</title>
+</head>
+<body>
+<main layout:fragment="main-content" th:class="main-container">
+  <div class="category-list">
+    <ul class="category">
+      <li class="category-item selected">밀키트</li>
+      <li class="category-item">화장품</li>
+      <li class="category-item">간식</li>
+    </ul>
+  </div>
+
+  <div class="product-grid" id="product-grid">
+    <div class="product-item" th:each="product : ${products}">
+      <a th:href="@{/products/{id}(id=${product.id})}">
+        <img th:src="@{${product.image[0]}}" alt="Product image"/>
+        <div class="product-price-container">
+          <span class="product-discount-rate" th:text="${product.discountRate} + '%'"></span>
+          <div class="price-container">
+            <span class="selling-price price" th:data-price="${product.sellingPrice}"></span>
+            <span class="final-price price" th:data-price="${product.finalPrice}"></span>
+          </div>
+        </div>
+        <p class="product-name name" th:data-name="${product.name}"></p>
+      </a>
+    </div>
+  </div>
+</main>
+</body>
+</html>

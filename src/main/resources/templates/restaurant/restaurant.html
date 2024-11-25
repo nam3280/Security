@@ -1,0 +1,1512 @@
+<!DOCTYPE html>
+<html th:replace="~{fragment/layout.html :: layout(~{::main})}" xmlns:th="http://www.thymeleaf.org">
+
+
+<main>
+<!--
+
+  &lt;!&ndash;윤호님 CSS &ndash;&gt;
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/reservation1/calendar-17/fonts/icomoon/style.css" th:href="@{/assets/libs/calendar-17/fonts/icomoon/style.css}">
+  <link rel="stylesheet" href="/reservation1/calendar-17/css/rome.css" th:href="@{/assets/libs/calendar-17/css/rome.css}">
+  &lt;!&ndash; Bootstrap CSS &ndash;&gt;
+  <link rel="stylesheet" href="/reservation1/calendar-17/css/bootstrap.min.css" th:href="@{/assets/libs/calendar-17/css/bootstrap.min.css}">
+  &lt;!&ndash; Style &ndash;&gt;
+  <link rel="stylesheet" href="/reservation1/calendar-17/css/style.css" th:href="@{/assets/libs/calendar-17/css/style.css}">
+
+
+
+
+  &lt;!&ndash;윤호님 css &ndash;&gt;
+  <style>
+    @import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
+
+  .card {
+        padding: 1rem;
+        background-color: #ffffff;
+        border-radius: 5px;
+    }
+
+    .card h5{
+        font-size: 12px;
+    }
+
+    p {
+        margin-top: 0;
+        margin-bottom: 5px;
+        font-size: 10px;
+        font-weight:500;
+    }
+
+    h4{
+        margin-bottom: 10px;
+    }
+
+    .toss{
+        background-color: #ffffff;
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #000000 !important;
+        border-radius: 5px;
+    }
+
+    .toss.select {
+        background-color: #ebedef;
+        border: 1px solid #000000;
+        transition-duration: 0.1s;
+    }
+
+    .pay{
+        padding: 0.5rem;
+        background-color: #5AAB6F;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .pay p {
+        color: #ffffff;
+        padding: 10px;
+        text-align: center;
+        display: flex;
+        direction: right;
+        font-size: 15px;
+        padding-bottom: 0%
+    }
+
+    .content{
+        padding: 1rem;
+    }
+
+    .content-payment{
+        padding: 1rem;
+        padding-top: 0%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .button-payment{
+        border: 0 solid;
+        border-radius: 5px;
+        background-color: #ffffff;
+        color: #5AAB6F;
+    }
+
+    .button-payment:active{
+        background-color: #86ce99;
+        color: #ffffff;
+    }
+
+    .button-payment:focus {
+        color: #ffffff;
+        outline: none;
+    }
+
+    .button-payment:focus:not(:active) {
+        background-color: #ffffff;
+        color: #5AAB6F;
+    }
+
+    a:focus, a:active, a:link, a:visited, button:focus, button:active {
+        border: none;
+    }
+
+
+    .mobile-header-nav-item {
+        padding: 0.5rem 1rem;
+    }
+  }
+  </style>
+-->
+
+
+
+
+  <main>
+
+    <!-- 상위 카테고리 표시 영역 Home / 식당 / 오 이터리 이런 느낌-->
+  <div class="mt-4">
+    <div class="container">
+      <!-- row -->
+      <div class="row ">
+        <!-- col -->
+        <div class="col-12">
+          <!-- breadcrumb -->
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb mb-0">
+              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <li class="breadcrumb-item"><a href="#">Bakery Biscuits</a></li>
+
+              <li class="breadcrumb-item active" aria-current="page">Napolitanke Ljesnjak</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <!-- 메인 영역-->
+  <section class="mt-8">
+    <div class="container">
+      <div class="row">
+
+
+        <!-- 이미지 슬라이드 영역-->
+        <div class="col-md-6">
+
+          <!-- img slide -->
+          <div class="product" id="product">
+
+            <div>
+              <a href="/restaurants/1" class="text-decoration-none text-inherit">
+                <div >
+                  <div>
+                    <img src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm.jpeg}"  style="width:100%;height:27rem" alt="Grocery Ecommerce Template" class="mb-3">
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="/restaurants/1" class="text-decoration-none text-inherit">
+                <div >
+                  <div >
+                    <img src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm0.jpeg}" style="width:100%;height:27rem" alt="Grocery Ecommerce Template" class="mb-3">
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="/restaurants/1" class="text-decoration-none text-inherit">
+                <div>
+                  <div>
+                    <img src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm1.jpeg}"  style="width:100%;height:27rem" alt="Grocery Ecommerce Template" class="mb-3">
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div>
+              <a href="/restaurants/1" class="text-decoration-none text-inherit">
+                <div>
+                  <div>
+                    <img src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm2.jpeg}"  style="width:100%;height:27rem" alt="Grocery Ecommerce Template" class="mb-3">
+                  </div>
+                </div>
+              </a>
+            </div>
+            </div>
+
+
+          <!-- 이미지 슬라이드 하단 썸네일 영역 -->
+          <div class="product-tools">
+            <div class="thumbnails row g-3" id="productThumbnails">
+              <div class="col-3">
+                <div class="thumbnails-img">
+                  <!-- img -->
+                  <img class="d-lg-none d-block" src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm.jpeg}" style="width:10rem;height:5rem" alt="">
+                  <img class="d-lg-block d-none" src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm.jpeg}" style="width:10rem;height:7rem" alt="">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="thumbnails-img">
+                  <!-- img -->
+                  <img class="d-lg-none d-block"  src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm0.jpeg}" style="width:10rem;height:5rem"  alt="">
+                  <img class="d-lg-block d-none" src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm0.jpeg}" style="width:10rem;height:7rem"  alt="">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="thumbnails-img">
+                  <!-- img -->
+                  <img class="d-lg-none d-block"  src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm1.jpeg}" style="width:10rem;height:5rem"  alt="">
+                  <img class="d-lg-block d-none"  src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm1.jpeg}" style="width:10rem;height:7rem"  alt="">
+                </div>
+              </div>
+              <div class="col-3">
+                <div class="thumbnails-img">
+                  <!-- img -->
+                  <img class="d-lg-none d-block"  src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm2.jpeg}" style="width:10rem;height:5rem"  alt="">
+                  <img class="d-lg-block d-none"  src="../../static/assets/images/products/product-single-img-1.jpg" th:src="@{/assets/images/restaurant/umm/umm2.jpeg}" style="width:10rem;height:7rem"  alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+        <!--메인 매장 정보 영역-->
+        <div class="col-md-6 ">
+          <div class="ps-lg-10 mt-6 mt-md-0">
+            <!-- content -->
+            <!-- heading -->
+            <h6 class="text-muted ">양식</h6>
+            <h1 class="mb-1">음 이터리 </h1>
+            <div class="mb-4">
+              <!-- rating --> <small class="text-warning"><i class="bi bi-star-fill"></i></small><a href="#" class="ms-1">리뷰 30개</a>
+            </div>
+            <span>최고의 비건 맛집 음 이터리입니다.</span>
+
+            <!-- hr -->
+            <hr class="my-3">
+
+              <!-- heading -->
+            <div class="text-dark"> <!--가로로 컴포넌트들을 배치-->
+              <i class="bi bi-geo-alt"></i><span>&nbsp;&nbsp;강남역 1번출구에서 100m</span>
+            </div>
+
+
+
+            <div class="text-dark"> <!--가로로 컴포넌트들을 배치-->
+              <i class="bi bi-currency-dollar"></i><span>&nbsp;&nbsp;평균 1만원</span>
+            </div>
+
+
+
+            <div class="text-dark"> <!--가로로 컴포넌트들을 배치-->
+              <i class="bi bi-alarm"></i><span>&nbsp;&nbsp;영업 중 <span class="text-muted small">∙</span> 22:00 영업 종료</span>
+
+            </div>
+
+            <div class="mt-3">
+              <div class="badge text-bg-light ">주차 가능</div>
+              <div class="badge text-bg-light ">단체 이용 가능 </div>
+              <div class="badge text-bg-light ">포장 </div>
+              <div class="badge text-bg-light ">배달 </div>
+            </div>
+
+
+            <div class="mt-3 row justify-content-start g-2 align-items-center">
+
+
+
+
+              <div class="col-xxl-4 col-lg-4 col-md-5 col-5 d-grid d-flex justify-content-start" style="width:100%">
+                <!-- button -->
+                <!-- btn --> <button type="button" class="btn btn-primary col-11 clear-button"  data-bs-toggle="modal" href="#exampleModalToggle"><i class="feather-icon icon-shopping-bag me-2"></i>예약하기</button>
+                <a class="btn btn-light col-1" href="../pages/shop-wishlist.html" data-bs-toggle="tooltip" data-bs-html="true" aria-label="Wishlist"><i class="feather-icon icon-heart"></i></a>
+              </div>
+
+
+
+
+              <!-- 예약하기 모달창(윤호님 기능)-->
+              <div class="modal fade" id="exampleModalToggle" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel">예약</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="content">
+                        <h2>예약 날짜</h2>
+                        <form action="#" class="row">
+                          <div class="col-md-12">
+                            <div id="inline_cal"></div>
+                          </div>
+                        </form>
+                        <h2 style="padding-top: 40px;">인원 수</h2>
+                        <div class="button-slider" id="person-buttons">
+                          <button type="button" class="circle-button">1</button>
+                          <button type="button" class="circle-button">2</button>
+                          <button type="button" class="circle-button">3</button>
+                          <button type="button" class="circle-button">4</button>
+                          <button type="button" class="circle-button">5</button>
+                          <button type="button" class="circle-button">6</button>
+                        </div>
+                        <h2 style="padding-top: 40px;">예약 시간</h2>
+                        <div class="button-slider" id="time-buttons">
+                          <button type="button" class="rectangle-button">오후 14 : 00</button>
+                          <button type="button" class="rectangle-button">오후 15 : 00</button>
+                          <button type="button" class="rectangle-button">오후 16 : 00</button>
+                          <button type="button" class="rectangle-button">오후 17 : 00</button>
+                          <button type="button" class="rectangle-button">오후 18 : 00</button>
+                          <button type="button" class="rectangle-button">오후 19 : 00</button>
+                          <button type="button" class="rectangle-button">오후 20 : 00</button>
+                        </div>
+                        <div class="clear">
+                          <button type="button" class="clear-button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal" data-bs-dismiss="modal">예약 하기</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="modal fade" id="exampleModalToggle2" data-bs-backdrop="static" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalToggleLabel2">결제</h5>
+                      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="content">
+                        <h5>예약 날짜</h5>
+                        <div class="card">
+                          <h5>예약 장소 : 김이정</h5>
+                          <h5>예약 날짜 : 11월 3일 (일) 오후 14 : 00</h5>
+                          <h5 style="margin-bottom: 0px;">인원 수 : 1명</h5>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <div class="d-flex align-items-center">
+                          <h5 style="margin-bottom: 0px;">위약금</h5>
+                          <a class="position-relative btn-icon btn-ghost-secondary btn rounded-circle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <svg xmlns="http://www.w3.org/2000/svg" style="color: #5AAB6F;" width="20" height="20" fill="currentColor" class="bi bi-info-circle" viewBox="0 0 16 16">
+                              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0"/>
+                            </svg>
+                          </a>
+
+                          <div class="dropdown-menu dropdown-menu-end dropdown-menu-lg p-0 border-radius-10" style="box-shadow: 0 0 5px rgba(0, 0, 0, 0.1); background-color: #f6f6f6;">
+                            <div class="border-bottom p-3 d-flexjustify-content-between align-items-center border-1">
+                              <p class="mb-3">위약금 정책</p>
+                              <p><span style="color: #5AAB6F;">1.</span> 2일 전 취소: 100% 환불</p>
+                              <p><span style="color: #5AAB6F;">2.</span> 1일 전 취소: 50% 환불</p>
+                              <p><span style="color: #5AAB6F;">3.</span> 당일 취소: 환불 불가</p>
+                              <p><span style="color: #5AAB6F;">4.</span> 노쇼: 환불 불가</p>
+                            </div>
+
+                          </div>
+                        </div>
+                        <div class="card">
+                          <h5>계산 : (예약 인원 수) x 10000</h5>
+                          <h5 style="margin-bottom: 0px;">결제 총액 : 10000원</h5>
+                        </div>
+                      </div>
+                      <div class="content">
+                        <h5>결제 수단</h5>
+                        <div class="card">
+                          <h5 style="margin-right: auto;">결제 수단을 선택하세요.</h5>
+                          <button type="button" class="toss" id="toss1">
+                            <img src="/reservation2/logo/logo-toss-pay.svg" style="width: 30%;">
+                          </button>
+                          <button type="button" class="toss" style="margin-top: 20px;" id="toss2">
+                            <img src="/reservation2/logo/logo-toss-pay.svg" style="width: 30%;">
+                          </button>
+                          <h5 style="margin-top: 10px; margin-right: auto;">개인정보 제3자 제공고지</h5>
+                          <div class="card" style="background-color: #f6f6f6;">
+                            <p>wannaV는 회원들의 개인정보를 안전하게 취급하는 데 최선을 다합니다.</p>
+                            <p>고객님의 개인정보는 원활한 예약을 위한 기록 보존을 위해 아래 업체에 제공됩니다.</p>
+                            <p>1. 제공받는 자: 회원이 예약 신청한 식당, 예약관리 솔루션 wannaV 매장용</p>
+                            <p>2. 제공받는 자의 개인정보 이용 목적: 식당 예약 서비스 제공(서비스 계약 이행, 예약 확인, 예약 및 관리, 고객 관리) 및 제공 거절</p>
+                            <p>3. 제공하는 개인정보 항목: 전화번호, 예약 신청자 이름, 결제정보, 기타 예약 및 대기를 위해 필요한 정보</p>
+                            <p>4. 제공받는 자의 보유기간: 예약을 통한 식당 방문일로부터 1년이 경과한 때까지 보관.</p>
+                            <p style="font-weight: bold;">동의를 거부할 권리가 있으나, 서비스 제공을 위해 필요한 최소한의 개인정보이므로 동의 거부 시 wannaV 예약 서비스 이용이 제한됩니다.</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="content-payment">
+                        <p style="font-size: 10px; margin-right: 10px; margin-bottom: 0%; display: flex; justify-content: center; align-items: center; font-weight: bold;">주문 내용을 확인하였으며, 정보 제공 등에 동의합니다.
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" id="checkbox" style="width: 20px; height: 20px;">
+                          <label class="form-check-label" style="font-size: 10px;">동의(필수)</label>
+                        </div>
+                        </p>
+                      </div>
+
+                      <div class="pay">
+                        <p style="font-weight: bold;">결제 금액: 10000원</p>
+                        <button type="button" class="button-payment" id="payment" disabled>결제 하기</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- hr -->
+            <hr class="my-6">
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+    <style>
+      .navbar-container {
+  display: flex;
+  justify-content: space-around; /* 중앙에 배치하면서 일정 간격으로 띄움 */
+  width: 100%;
+}
+
+    </style>
+
+
+
+    <!-- 하단 전체 영역-->
+    <section class="mt-lg-14 mt-8 ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+
+
+          <!-- 모바일 , 데스크탑 UI 메뉴 바 상세 영역 추후 데스크탑 UI 중간 안맞다싶으면 margin-right:1rem 조절하자-->
+          <ul class="nav nav-pills nav-lb-tab navbar-container" id="myTab" role="tablist" >
+            <!-- nav item -->
+            <li class="nav-item navbar-item mx-5" role="presentation">
+              <!-- btn --> <button class="nav-link active" id="product-tab" data-bs-toggle="tab"
+                data-bs-target="#product-tab-pane" type="button" role="tab" aria-controls="product-tab-pane"
+                aria-selected="true" style="font-size:large;margin-right:1rem;">매장 정보</button> <!-- 여기에 지도 및 주소 나타내면 될듯 , 또한 상세정보들 기입 , 캐치테이블 참고해서 ㄱㄱ-->
+            </li>
+            <!-- nav item -->
+            <li class="nav-item navbar-item mx-5" role="presentation">
+              <!-- btn --> <button class="nav-link" id="details-tab" data-bs-toggle="tab"
+                data-bs-target="#details-tab-pane" type="button" role="tab" aria-controls="details-tab-pane"
+                aria-selected="false" style="font-size:large;margin-right:1rem;">메뉴</button>
+            </li>
+            <!-- nav item -->
+            <li class="nav-item navbar-item mx-5" role="presentation">
+              <!-- btn --> <button class="nav-link" id="reviews-tab" data-bs-toggle="tab"
+                data-bs-target="#reviews-tab-pane" type="button" role="tab" aria-controls="reviews-tab-pane"
+                aria-selected="false" style="font-size:large;margin-right:1rem;">리뷰</button>
+            </li>
+
+          </ul>
+
+
+
+          <!-- 데스크탑 UI 메뉴 바 상세 영역-->
+
+
+
+          <!-- 1. 매장 정보 메뉴  -->
+          <div class="tab-content" id="myTabContent">
+
+            <!-- 매장 정보 메뉴 -->
+            <div class="tab-pane fade show active" id="product-tab-pane" role="tabpanel" aria-labelledby="product-tab"
+              tabindex="0">
+              <div class="my-8">
+                <div class="row">
+                  <div class="col-12">
+                    <h4 class="mb-4">매장 소개</h4>
+                    <p>청담동도심 속 정원에서 미국 정통 스테이크의 맛과 서비스를 느껴보세요. 넓은 정원과 쾌적한 환경을 제공해드립니다.</p>
+
+                  </div>
+
+                  <div class="col-12 mt-4">
+                    <h4 class="mb-4">위치</h4>
+
+                    <div class="col-12" id="map" style="height:350px; "></div> <!-- col--->
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 음식 메뉴바 -->
+            <div class="tab-pane fade" id="details-tab-pane" role="tabpanel" aria-labelledby="details-tab" tabindex="0">
+              <div class="my-8">
+
+                  <ul class="list-group list-group-flush">
+                  <!-- list group -->
+                  <li class="list-group-item py-3 ps-0 border-top">
+                    <!-- 이미지 -->
+                    <div class="row align-items-center" >
+                      <div class="col-3 col-lg-1">
+                        <img src="/assets/images/restaurant/food/food1.jpeg" th:src="@{/assets/images/restaurant/food/food1.jpeg}" alt="Ecommerce" class="img-fluid">
+                      </div>
+
+                      <div class="col-4 col-md-6 col-lg-5">  <!-- col로 조절하면 됨-->
+                        <!-- title -->
+                        <a href="../restaurant/restaurant.html" class="text-inherit">
+                          <h5 class="mb-0" style="white-space: nowrap;">비건 소세지 바</h5>
+                        </a>
+                        <div class="mt-1">
+                        <!-- price -->
+                          <span class="fw-bold ">15,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- list group -->
+                  <li class="list-group-item py-3 ps-0 border-top">
+                    <!-- 이미지 -->
+                    <div class="row align-items-center" >
+                      <div class="col-3 col-lg-1">
+                        <img src="/assets/images/restaurant/food/food1.jpeg" th:src="@{/assets/images/restaurant/food/food2.jpeg}" alt="Ecommerce" class="img-fluid">
+                      </div>
+
+                      <div class="col-4 col-md-6 col-lg-5">  <!-- col로 조절하면 됨-->
+                        <!-- title -->
+                        <a href="../restaurant/restaurant.html" class="text-inherit">
+                          <h5 class="mb-0" style="white-space: nowrap;">여러가지 버섯을 넣은 오일 파스타</h5>
+                        </a>
+                        <div class="mt-1">
+                        <!-- price -->
+                          <span class="fw-bold ">30,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- list group -->
+                  <li class="list-group-item py-3 ps-0 border-top">
+                    <!-- 이미지 -->
+                    <div class="row align-items-center" >
+                      <div class="col-3 col-lg-1">
+                        <img src="/assets/images/restaurant/food/food1.jpeg" th:src="@{/assets/images/restaurant/food/food3.jpeg}" alt="Ecommerce" class="img-fluid">
+                      </div>
+
+                      <div class="col-4 col-lg-5">  <!-- col로 조절하면 됨-->
+                        <!-- title -->
+                        <a href="../restaurant/restaurant.html" class="text-inherit">
+                          <h5 class="mb-0 " style="white-space: nowrap;">여러가지 버섯을 넣은 크림 파스타</h5>
+                        </a>
+                        <div class="mt-1">
+                        <!-- price -->
+                          <span class="fw-bold ">30,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- list group -->
+                  <li class="list-group-item py-3 ps-0 border-top">
+                    <!-- 이미지 -->
+                    <div class="row align-items-center" >
+                      <div class="col-3 col-lg-1">
+                        <img src="/assets/images/restaurant/food/food1.jpeg" th:src="@{/assets/images/restaurant/food/food4.jpeg}" alt="Ecommerce" class="img-fluid">
+                      </div>
+
+                      <div class="col-4 col-lg-5">  <!-- col로 조절하면 됨-->
+                        <!-- title -->
+                        <a href="../restaurant/restaurant.html" class="text-inherit">
+                          <h5 class="mb-0" style="white-space: nowrap;">마파두부를 올린 크림 리조또</h5>
+                        </a>
+                        <div class="mt-1">
+                        <!-- price -->
+                          <span class="fw-bold ">23,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!-- list group -->
+                  <li class="list-group-item py-3 ps-0 border-top">
+                    <!-- 이미지 -->
+                    <div class="row align-items-center" >
+                      <div class="col-3 col-lg-1">
+                        <img src="/assets/images/restaurant/food/food1.jpeg" th:src="@{/assets/images/restaurant/food/food5.jpeg}" alt="Ecommerce" class="img-fluid">
+                      </div>
+
+                      <div class="col-4 col-md-6 col-lg-5">  <!-- col로 조절하면 됨-->
+                        <!-- title -->
+                        <a href="../restaurant/restaurant.html" class="text-inherit">
+                          <h5 class="mb-0" style="white-space: nowrap;">고르곤졸라 크림 가지 발도스타나</h5>
+                        </a>
+                        <div class="mt-1">
+                        <!-- price -->
+                          <span class="fw-bold ">25,000원</span>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+
+
+
+                </ul>
+
+
+
+
+
+
+              </div>
+            </div>
+            <!-- tab pane -->
+            <div class="tab-pane fade" id="reviews-tab-pane" role="tabpanel" aria-labelledby="reviews-tab" tabindex="0">
+              <div class="my-8">
+                <!-- row -->
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="me-lg-12 mb-6 mb-md-0">
+                      <div class="mb-5">
+                        <!-- title -->
+                        <h4 class="mb-3">Customer reviews</h4>
+                        <span>
+                          <!-- rating --> <small class="text-warning"> <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-fill"></i>
+                            <i class="bi bi-star-half"></i></small><span class="ms-3">4.1 out of 5</span><small
+                            class="ms-3">11,130 global ratings</small></span>
+                      </div>
+                      <div class="mb-8">
+                        <!-- progress -->
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="text-nowrap me-3 text-muted"><span
+                              class="d-inline-block align-middle text-muted">5</span><i
+                              class="bi bi-star-fill ms-1 small text-warning"></i></div>
+                          <div class="w-100">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 60%;"
+                                aria-valuenow="60" aria-valuemin="0" aria-valuemax="100"></div>
+                            </div>
+                          </div><span class="text-muted ms-3">53%</span>
+                        </div>
+                        <!-- progress -->
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="text-nowrap me-3 text-muted"><span
+                              class="d-inline-block align-middle text-muted">4</span><i
+                              class="bi bi-star-fill ms-1 small text-warning"></i></div>
+                          <div class="w-100">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 50%;"
+                                aria-valuenow="50" aria-valuemin="0" aria-valuemax="50"></div>
+                            </div>
+                          </div><span class="text-muted ms-3">22%</span>
+                        </div>
+                        <!-- progress -->
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="text-nowrap me-3 text-muted"><span
+                              class="d-inline-block align-middle text-muted">3</span><i
+                              class="bi bi-star-fill ms-1 small text-warning"></i></div>
+                          <div class="w-100">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 35%;"
+                                aria-valuenow="35" aria-valuemin="0" aria-valuemax="35"></div>
+                            </div>
+                          </div><span class="text-muted ms-3">14%</span>
+                        </div>
+                        <!-- progress -->
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="text-nowrap me-3 text-muted"><span
+                              class="d-inline-block align-middle text-muted">2</span><i
+                              class="bi bi-star-fill ms-1 small text-warning"></i></div>
+                          <div class="w-100">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 22%;"
+                                aria-valuenow="22" aria-valuemin="0" aria-valuemax="22"></div>
+                            </div>
+                          </div><span class="text-muted ms-3">5%</span>
+                        </div>
+                        <!-- progress -->
+                        <div class="d-flex align-items-center mb-2">
+                          <div class="text-nowrap me-3 text-muted"><span
+                              class="d-inline-block align-middle text-muted">1</span><i
+                              class="bi bi-star-fill ms-1 small text-warning"></i></div>
+                          <div class="w-100">
+                            <div class="progress" style="height: 6px;">
+                              <div class="progress-bar bg-warning" role="progressbar" style="width: 14%;"
+                                aria-valuenow="14" aria-valuemin="0" aria-valuemax="14"></div>
+                            </div>
+                          </div><span class="text-muted ms-3">7%</span>
+                        </div>
+                      </div>
+                      <div class="d-grid">
+                        <h4>Review this product</h4>
+                        <p class="mb-0">Share your thoughts with other customers.</p>
+                        <a href="#" class="btn btn-outline-gray-400 mt-4 text-muted">Write the Review</a>
+                      </div>
+
+                    </div>
+                  </div>
+                  <!-- col -->
+                  <div class="col-md-8">
+                    <div class="mb-10">
+                      <div class="d-flex justify-content-between align-items-center mb-8">
+                        <div>
+                          <!-- heading -->
+                          <h4>Reviews</h4>
+                        </div>
+                        <div>
+                          <select class="form-select">
+                            <option selected>Top Review</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                            <option value="3">Three</option>
+                          </select>
+                        </div>
+
+                      </div>
+                      <div class="d-flex border-bottom pb-6 mb-6">
+                        <!-- img -->
+                        <!-- img --><img src="../../static/assets/images/avatar/avatar-10.jpg" alt=""
+                                         class="rounded-circle avatar-lg">
+                        <div class="ms-5">
+                          <h6 class="mb-1">
+                            Shankar Subbaraman
+
+                          </h6>
+                          <!-- select option -->
+                          <!-- content -->
+                          <p class="small"> <span class="text-muted">30 December 2022</span>
+                            <span class="text-primary ms-3 fw-bold">Verified Purchase</span></p>
+                          <!-- rating -->
+                          <div class=" mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <span class="ms-3 text-dark fw-bold">Need to recheck the weight at delivery point</span>
+                          </div>
+                          <!-- text-->
+                          <p>Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open
+                            package, there is a possibility of pilferage in between. FreshCart sends the veggies and
+                            fruits through sealed plastic covers and Barcode on the weight etc. .</p>
+                          <div>
+                            <div class="border icon-shape icon-lg border-2 ">
+                              <!-- img --><img src="../../static/assets/images/products/product-img-1.jpg" alt=""
+                                               class="img-fluid ">
+                            </div>
+                            <div class="border icon-shape icon-lg border-2 ms-1 ">
+                              <!-- img --><img src="../../static/assets/images/products/product-img-2.jpg" alt=""
+                                               class="img-fluid ">
+                            </div>
+                            <div class="border icon-shape icon-lg border-2 ms-1 ">
+                              <!-- img --><img src="../../static/assets/images/products/product-img-3.jpg" alt=""
+                                               class="img-fluid ">
+                            </div>
+
+                          </div>
+                          <!-- icon -->
+                          <div class="d-flex justify-content-end mt-4">
+                            <a href="#" class="text-muted"><i class="feather-icon icon-thumbs-up me-1"></i>Helpful</a>
+                            <a href="#" class="text-muted ms-4"><i class="feather-icon icon-flag me-2"></i>Report
+                              abuse</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex border-bottom pb-6 mb-6 pt-4">
+                        <!-- img --><img src="../../static/assets/images/avatar/avatar-12.jpg" alt=""
+                                         class="rounded-circle avatar-lg">
+                        <div class="ms-5">
+                          <h6 class="mb-1">
+                            Robert Thomas
+
+                          </h6>
+                          <!-- content -->
+                          <p class="small"> <span class="text-muted">29 December 2022</span>
+                            <span class="text-primary ms-3 fw-bold">Verified Purchase</span></p>
+                          <!-- rating -->
+                          <div class=" mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                            <span class="ms-3 text-dark fw-bold">Need to recheck the weight at delivery point</span>
+                          </div>
+
+                          <p>Product quality is good. But, weight seemed less than 1kg. Since it is being sent in open
+                            package, there is a possibility of pilferage in between. FreshCart sends the veggies and
+                            fruits through sealed plastic covers and Barcode on the weight etc. .</p>
+
+                          <!-- icon -->
+                          <div class="d-flex justify-content-end mt-4">
+                            <a href="#" class="text-muted"><i class="feather-icon icon-thumbs-up me-1"></i>Helpful</a>
+                            <a href="#" class="text-muted ms-4"><i class="feather-icon icon-flag me-2"></i>Report
+                              abuse</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex border-bottom pb-6 mb-6 pt-4">
+                        <!-- img --><img src="../../static/assets/images/avatar/avatar-9.jpg" alt=""
+                                         class="rounded-circle avatar-lg">
+                        <div class="ms-5">
+                          <h6 class="mb-1">
+                            Barbara Tay
+
+                          </h6>
+                          <!-- content -->
+                          <p class="small"> <span class="text-muted">28 December 2022</span>
+                            <span class="text-danger ms-3 fw-bold">Unverified Purchase</span></p>
+                          <!-- rating -->
+                          <div class=" mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                            <span class="ms-3 text-dark fw-bold">Need to recheck the weight at delivery point</span>
+                          </div>
+
+                          <p>Everytime i ordered from fresh i got greenish yellow bananas just like i wanted so go for
+                            it , its happens very rare that u get over riped ones.</p>
+
+                          <!-- icon -->
+                          <div class="d-flex justify-content-end mt-4">
+                            <a href="#" class="text-muted"><i class="feather-icon icon-thumbs-up me-1"></i>Helpful</a>
+                            <a href="#" class="text-muted ms-4"><i class="feather-icon icon-flag me-2"></i>Report
+                              abuse</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="d-flex border-bottom pb-6 mb-6 pt-4">
+                        <!-- img --><img src="../../static/assets/images/avatar/avatar-8.jpg" alt=""
+                                         class="rounded-circle avatar-lg">
+                        <div class="ms-5 flex-grow-1">
+                          <h6 class="mb-1">
+                            Sandra Langevin
+
+                          </h6>
+                          <!-- content -->
+                          <p class="small"> <span class="text-muted">8 December 2022</span>
+                            <span class="text-danger ms-3 fw-bold">Unverified Purchase</span></p>
+                          <!-- rating -->
+                          <div class=" mb-2">
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star-fill text-warning"></i>
+                            <i class="bi bi-star text-warning"></i>
+                            <span class="ms-3 text-dark fw-bold">Great product</span>
+                          </div>
+
+                          <p>Great product & package. Delivery can be expedited. </p>
+
+                          <!-- icon -->
+                          <div class="d-flex justify-content-end mt-4">
+                            <a href="#" class="text-muted"><i class="feather-icon icon-thumbs-up me-1"></i>Helpful</a>
+                            <a href="#" class="text-muted ms-4"><i class="feather-icon icon-flag me-2"></i>Report
+                              abuse</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div>
+                        <a href="#" class="btn btn-outline-gray-400 text-muted">Read More Reviews</a>
+                      </div>
+                    </div>
+                    <div>
+                      <!-- rating -->
+                      <h3 class="mb-5">Create Review</h3>
+                      <div class="border-bottom py-4 mb-4">
+                        <h4 class="mb-3">Overall rating</h4>
+                        <div id="rater"></div>
+                      </div>
+                      <div class="border-bottom py-4 mb-4">
+                        <h4 class="mb-0">Rate Features</h4>
+                        <div class="my-5">
+                          <h5>Flavor</h5>
+                          <div id="rate-2"></div>
+                        </div>
+                        <div class="my-5">
+                          <h5>Value for money</h5>
+                          <div id="rate-3"></div>
+                        </div>
+                        <div class="my-5">
+                          <h5>Scent</h5>
+                          <div id="rate-4"></div>
+                        </div>
+
+
+                      </div>
+                      <!-- form control -->
+                      <div class="border-bottom py-4 mb-4">
+                        <h5>Add a headline</h5>
+                        <input type="text" class="form-control" placeholder="What’s most important to know">
+                      </div>
+                      <div class="border-bottom py-4 mb-4">
+                        <h5>Add a photo or video</h5>
+                        <p>Shoppers find images and videos more helpful than text alone.</p>
+                        <!-- form -->
+                        <form action="#" class=" dropzone profile-dropzone">
+                          <div class="fallback">
+                            <input name="file" type="file" multiple />
+                          </div>
+                        </form>
+
+                      </div>
+                      <div class=" py-4 mb-4">
+                        <!-- heading -->
+                        <h5>Add a written review</h5>
+                        <textarea class="form-control" rows="3"
+                          placeholder="What did you like or dislike? What did you use this product for?"></textarea>
+
+                      </div>
+                      <!-- button -->
+                      <div class="d-flex justify-content-end">
+                        <a href="#" class="btn btn-primary">Submit Review</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+            <!-- tab pane -->
+            <div class="tab-pane fade" id="sellerInfo-tab-pane" role="tabpanel" aria-labelledby="sellerInfo-tab"
+              tabindex="0">...</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </section>
+
+  <!-- section -->
+  <section class="my-lg-14 my-14">
+    <div class="container">
+      <!-- row -->
+      <div class="row">
+        <div class="col-12">
+          <!-- heading -->
+          <h3>이 장소와 비슷한 맛집</h3>
+        </div>
+      </div>
+
+
+      <!-- row -->
+      <div class="row g-4 row-cols-xl-3 row-cols-lg-3 row-cols-2 row-cols-md-2 mt-2">
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product" style="display: flex;flex-direction: column;flex: 1;">
+            <div class="card-body " >
+              <!-- badge -->
+              <div class="text-center position-relative ">
+                <a href="/hello" ><img src="/assets/images/restaurant/dliea/place1.jpg" style="width:50rem;height:20rem" alt="딜리아다이닝" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/dliea/place1.jpg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+              </div>
+
+              <!-- 식당 이름 및 분류-->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>양식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">딜리아다이닝</a></h1>
+
+              <div>
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product">
+            <div class="card-body  ">
+              <!-- badge -->
+
+              <div class="text-center position-relative ">
+                <a href="#!" class="col-12"><img src="/assets/images/restaurant/dliea/place2.jpg" style="width:50rem;height:20rem" alt="비건페스타" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/dliea/place2.jpg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+
+
+                <!-- action btn -->
+                <div class="card-product-action">
+                  <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                      class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+                  <a href="../pages/shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
+                     title="Wishlist"><i class="bi bi-heart"></i></a>
+                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i
+                      class="bi bi-arrow-left-right"></i></a>
+                </div>
+              </div>
+              <!-- heading -->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>한식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">비건페스타</a></h1>
+              <div>
+
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product">
+            <div class="card-body">
+              <!-- badge -->
+
+              <div class="text-center position-relative ">
+
+                <a href="#!"><img src="/assets/images/restaurant/dliea/place3.jpg" style="width:50rem;height:20rem" alt="딜리아다이닝" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/dliea/place3.jpg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+
+                <!-- action btn -->
+                <div class="card-product-action">
+                  <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                      class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+                  <a href="../pages/shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
+                     title="Wishlist"><i class="bi bi-heart"></i></a>
+                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i
+                      class="bi bi-arrow-left-right"></i></a>
+                </div>
+              </div>
+              <!-- heading -->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>양식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">딜리아다이닝</a></h1>
+              <div>
+
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product">
+            <div class="card-body">
+              <!-- badge -->
+
+              <div class="text-center position-relative ">
+
+                <a href="#!"><img src="/assets/images/restaurant/salardy_dache.jpeg" style="width:50rem;height:20rem" alt="딜리아다이닝" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/salardy_dache.jpeg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+
+
+                <!-- action btn -->
+                <div class="card-product-action">
+                  <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                      class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+                  <a href="../pages/shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
+                     title="Wishlist"><i class="bi bi-heart"></i></a>
+                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i
+                      class="bi bi-arrow-left-right"></i></a>
+                </div>
+              </div>
+              <!-- heading -->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>양식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">딜리아다이닝</a></h1>
+              <div>
+
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product">
+            <div class="card-body">
+              <!-- badge -->
+
+              <div class="text-center position-relative ">
+
+                <a href="#!"><img src="/assets/images/restaurant/begun_begining.jpeg" style="width:50rem;height:20rem" alt="딜리아다이닝" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/begun_begining.jpeg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+
+                <!-- action btn -->
+                <div class="card-product-action">
+                  <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                      class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+                  <a href="../pages/shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
+                     title="Wishlist"><i class="bi bi-heart"></i></a>
+                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i
+                      class="bi bi-arrow-left-right"></i></a>
+                </div>
+              </div>
+              <!-- heading -->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>양식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">딜리아다이닝</a></h1>
+              <div>
+
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        <!-- col -->
+        <div class="col">
+          <div class="card card-product">
+            <div class="card-body">
+              <!-- badge -->
+
+              <div class="text-center position-relative ">
+
+                <a href="#!"><img src="/assets/images/restaurant/dliea/place3.jpg" style="width:50rem;height:20rem" alt="딜리아다이닝" class="mb-3 img-fluid d-none d-lg-block"></a>
+                <a href="/hello" ><img src="/assets/images/restaurant/dliea/place3.jpg" style="width:50rem;height:9rem" alt="딜리아다이닝" class="mb-3 img-fluid d-block d-lg-none"></a>
+
+                <!-- action btn -->
+                <div class="card-product-action">
+                  <a href="#!" class="btn-action" data-bs-toggle="modal" data-bs-target="#quickViewModal"><i
+                      class="bi bi-eye" data-bs-toggle="tooltip" data-bs-html="true" title="Quick View"></i></a>
+                  <a href="../pages/shop-wishlist.html" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true"
+                     title="Wishlist"><i class="bi bi-heart"></i></a>
+                  <a href="#!" class="btn-action" data-bs-toggle="tooltip" data-bs-html="true" title="Compare"><i
+                      class="bi bi-arrow-left-right"></i></a>
+                </div>
+              </div>
+              <!-- heading -->
+              <div class="text-small mb-1"><a href="#!" class="text-decoration-none text-muted"><small>양식</small></a></div>
+              <h1 class="fs-5"><a href="#!" class="text-inherit text-decoration-none">딜리아다이닝</a></h1>
+              <div>
+
+                <!-- 별점-->
+                 <small class="text-warning">
+                  <i class="bi bi-star-fill"></i></small> <span class="text-muted small">4.5(149)</span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+        <nav class="mt-3">
+          <ul class="pagination">
+            <li class="page-item disabled">
+              <a class="page-link  mx-1 " href="#" aria-label="Previous">
+                <i class="feather-icon icon-chevron-left"></i>
+              </a>
+            </li>
+            <li class="page-item "><a class="page-link  mx-1 active" href="#">1</a></li>
+            <li class="page-item"><a class="page-link mx-1 text-body" href="#">2</a></li>
+
+            <li class="page-item"><a class="page-link mx-1 text-body" href="#">...</a></li>
+            <li class="page-item"><a class="page-link mx-1 text-body" href="#">12</a></li>
+            <li class="page-item">
+              <a class="page-link mx-1 text-body" href="#" aria-label="Next">
+                <i class="feather-icon icon-chevron-right"></i>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+    </div>
+  </section>
+
+</main>
+
+  <!-- modal -->
+  <!-- Modal -->
+<div class="modal fade" id="quickViewModal" tabindex="-1" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body p-8">
+        <div class="position-absolute top-0 end-0 me-3 mt-3">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="row">
+          <div class="col-lg-6">
+            <!-- img slide -->
+            <div class="product productModal" id="productModal">
+              <div
+                class="zoom"
+                onmousemove="zoom(event)"
+                style="
+                  background-image: url(../assets/images/products/product-single-img-1.jpg);
+                "
+              >
+                <!-- img -->
+                <img
+                  src="../../static/assets/images/products/product-single-img-1.jpg"
+                  alt=""
+            >
+              </div>
+              <div>
+                <div
+                  class="zoom"
+                  onmousemove="zoom(event)"
+                  style="
+                    background-image: url(../assets/images/products/product-single-img-2.jpg);
+                  "
+                >
+                  <!-- img -->
+                  <img
+                    src="../../static/assets/images/products/product-single-img-2.jpg"
+                    alt=""
+              >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="zoom"
+                  onmousemove="zoom(event)"
+                  style="
+                    background-image: url(../assets/images/products/product-single-img-3.jpg);
+                  "
+                >
+                  <!-- img -->
+                  <img
+                    src="../../static/assets/images/products/product-single-img-3.jpg"
+                    alt=""
+              >
+                </div>
+              </div>
+              <div>
+                <div
+                  class="zoom"
+                  onmousemove="zoom(event)"
+                  style="
+                    background-image: url(../assets/images/products/product-single-img-4.jpg);
+                  "
+                >
+                  <!-- img -->
+                  <img
+                    src="../../static/assets/images/products/product-single-img-4.jpg"
+                    alt=""
+              >
+                </div>
+              </div>
+            </div>
+            <!-- product tools -->
+            <div class="product-tools">
+              <div class="thumbnails row g-3" id="productModalThumbnails">
+                <div class="col-3 tns-nav-active">
+                  <div class="thumbnails-img">
+                    <!-- img -->
+                    <img
+                      src="../../static/assets/images/products/product-single-img-1.jpg"
+                      alt=""
+                >
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="thumbnails-img" >
+                    <!-- img -->
+                    <img
+                      src="../../static/assets/images/products/product-single-img-2.jpg"
+                      alt=""
+                >
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="thumbnails-img">
+                    <!-- img -->
+                    <img
+                      src="../../static/assets/images/products/product-single-img-3.jpg"
+                      alt=""
+                >
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="thumbnails-img">
+                    <!-- img -->
+                    <img
+                      src="../../static/assets/images/products/product-single-img-4.jpg"
+                      alt=""
+                >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ps-lg-8 mt-6 mt-lg-0">
+              <a href="#!" class="mb-4 d-block">Bakery Biscuits</a>
+              <h2 class="mb-1 h1">Napolitanke Ljesnjak</h2>
+              <div class="mb-4">
+                <small class="text-warning">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-half"></i></small
+                ><a href="#" class="ms-2">(30 reviews)</a>
+              </div>
+              <div class="fs-4">
+                <span class="fw-bold text-dark">$32</span>
+                <span class="text-decoration-line-through text-muted">$35</span
+                ><span
+                  ><small class="fs-6 ms-2 text-danger">26% Off</small></span
+                >
+              </div>
+              <hr class="my-6">
+              <div class="mb-4">
+                <button type="button" class="btn btn-outline-secondary">
+                  250g
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                  500g
+                </button>
+                <button type="button" class="btn btn-outline-secondary">
+                  1kg
+                </button>
+              </div>
+              <div>
+                <!-- input -->
+                <!-- input -->
+                <div class="input-group input-spinner  ">
+                  <input type="button" value="-" class="button-minus  btn  btn-sm " data-field="quantity">
+                  <input type="number" step="1" max="10" value="1" name="quantity" class="quantity-field form-control-sm form-input   ">
+                  <input type="button" value="+" class="button-plus btn btn-sm " data-field="quantity">
+                </div>
+              </div>
+              <div
+                class="mt-3 row justify-content-start g-2 align-items-center"
+              >
+
+                <div class="col-lg-4 col-md-5 col-6 d-grid">
+                  <!-- button -->
+                  <!-- btn -->
+                  <button type="button" class="btn btn-primary">
+                    <i class="feather-icon icon-shopping-bag me-2"></i>Add to
+                    cart
+                  </button>
+                </div>
+                <div class="col-md-4 col-5">
+                  <!-- btn -->
+                  <a
+                    class="btn btn-light"
+                    href="#"
+                    data-bs-toggle="tooltip"
+                    data-bs-html="true"
+                    aria-label="Compare"
+                    ><i class="bi bi-arrow-left-right"></i
+                  ></a>
+                  <a
+                    class="btn btn-light"
+                    href="#!"
+                    data-bs-toggle="tooltip"
+                    data-bs-html="true"
+                    aria-label="Wishlist"
+                    ><i class="feather-icon icon-heart"></i
+                  ></a>
+                </div>
+              </div>
+              <hr class="my-6">
+              <div>
+                <table class="table table-borderless">
+                  <tbody>
+                    <tr>
+                      <td>Product Code:</td>
+                      <td>FBB00255</td>
+                    </tr>
+                    <tr>
+                      <td>Availability:</td>
+                      <td>In Stock</td>
+                    </tr>
+                    <tr>
+                      <td>Type:</td>
+                      <td>Fruits</td>
+                    </tr>
+                    <tr>
+                      <td>Shipping:</td>
+                      <td>
+                        <small
+                          >01 day shipping.<span class="text-muted"
+                            >( Free pickup today)</span
+                          ></small
+                        >
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!--
+
+
+ 윤호님 js 시작
+
+
+  <script src="/reservation1/calendar-17/js/jquery-3.3.1.min.js" th:src="@{/assets/libs/calendar-17/js/jquery-3.3.1.min.js}"></script>
+  <script src="/reservation1/calendar-17/js/popper.min.js" th:src="@{/assets/libs/calendar-17/js/popper.min.js}"></script>
+  <script src="/reservation1/calendar-17/js/bootstrap.min.js" th:src="@{/assets/libs/calendar-17/js/bootstrap.min.js}"></script>
+  <script src="/reservation1/calendar-17/js/rome.js" th:src="@{/assets/libs/calendar-17/js/rome.js}"></script>
+  <script src="/reservation1/calendar-17/js/main.js" th:src="@{/assets/libs/calendar-17/js/main.js}"></script>
+
+
+
+
+  윤호님 js 시작
+  <script>
+    const circleButtons = document.querySelectorAll('.circle-button');
+    const rectangleButtons = document.querySelectorAll('.rectangle-button');
+
+    circleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        circleButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+
+    rectangleButtons.forEach(button => {
+      button.addEventListener('click', () => {
+        rectangleButtons.forEach(btn => btn.classList.remove('selected'));
+        button.classList.add('selected');
+      });
+    });
+
+    document.getElementById('inline_cal').addEventListener('click', () => {
+      circleButtons.forEach(button => button.classList.remove('selected'));
+      rectangleButtons.forEach(button => button.classList.remove('selected'));
+    });
+
+    document.addEventListener("DOMContentLoaded", function() {
+      const checkbox = document.querySelector('.form-check-input');
+      const tossButton1 = document.getElementById('toss1');
+      const tossButton2 = document.getElementById('toss2');
+      const paymentButton = document.getElementById("payment");
+
+      let toss1State = 0;
+      let toss2State = 0;
+
+      // 결제 버튼 활성화 함수
+      function updatePaymentButtonState() {
+          paymentButton.disabled = !(checkbox.checked && (toss1State === 1 || toss2State === 1));
+      }
+
+      function toggleTossState(buttonId, state) {
+          if (state === 'toss1') {
+              toss1State = toss1State === 0 ? 1 : 0;
+              toss2State = 0;
+          } else {
+              toss2State = toss2State === 0 ? 1 : 0;
+              toss1State = 0;
+          }
+
+          document.getElementById(buttonId).classList.toggle('select', state === 'toss1' ? toss1State === 1 : toss2State === 1);
+          document.getElementById(buttonId === 'toss1' ? 'toss2' : 'toss1').classList.remove('select');
+
+          console.log("toss1State:", toss1State);
+          console.log("toss2State:", toss2State);
+
+          // 버튼 클릭 시마다 결제 버튼 활성화 여부 확인
+          updatePaymentButtonState();
+      }
+
+      // Toss 버튼 클릭 시 상태 변경 및 결제 버튼 활성화 확인
+      tossButton1.addEventListener('click', () => toggleTossState('toss1', 'toss1'));
+      tossButton2.addEventListener('click', () => toggleTossState('toss2', 'toss2'));
+
+      // 체크박스 변경 시 결제 버튼 활성화 확인
+      checkbox.addEventListener('change', updatePaymentButtonState);
+  });
+  </script>
+
+   윤호님 js 끝
+
+
+-->
+
+
+</main>
+
+</html>

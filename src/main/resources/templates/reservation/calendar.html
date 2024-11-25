@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layout/layout}" lang="en">
+<head>
+  <link rel="stylesheet" href="/assets/calendar-17/css/style.css">
+  <link rel="stylesheet" href="/assets/calendar-17/css/rome.css">
+  <meta charset="UTF-8">
+  <title>reservation Page</title>
+
+</head>
+<body>
+<main layout:fragment="main-content" th:class="container">
+  <div class="content">
+    <h2>예약 날짜</h2>
+      <div class="col-md-12">
+        <div id="inline_cal"></div>
+      </div>
+
+      <h2 id="reservation-time"></h2>
+      <div class="button-slider" id="time-buttons">
+      </div>
+
+      <h2 id="reservation-guest"></h2>
+      <div class="button-slider" id="person-buttons">
+      </div>
+
+      <div class="clear">
+        <button type="submit" class="clear-button" id="submitReservation">예약 하기</button>
+      </div>
+  </div>
+</main>
+</body>
+</html>
+<script src="/assets/calendar-17/js/jquery-3.3.1.min.js"></script>
+<script src="/assets/calendar-17/js/popper.min.js"></script>
+<script src="/assets/calendar-17/js/bootstrap.min.js"></script>
+<script src="/assets/calendar-17/js/rome.js"></script>
+<script src="/assets/calendar-17/js/main.js"></script>
+<script>
+    let restaurantId = [[${restaurantId}]];
+</script>
